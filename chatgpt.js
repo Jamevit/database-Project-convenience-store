@@ -10,3 +10,21 @@
       }
     })();
 
+// Basic quantity control
+const decreaseBtn = document.getElementById("decrease");
+const increaseBtn = document.getElementById("increase");
+const quantityText = document.getElementById("quantity");
+
+let quantity = 1;
+
+increaseBtn.addEventListener("click", () => {
+  quantity++;
+  quantityText.textContent = quantity;
+});
+
+decreaseBtn.addEventListener("click", () => {
+  if (quantity > 1) {
+    quantity--;
+    quantityText.textContent = quantity;
+  }
+});
