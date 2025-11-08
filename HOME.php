@@ -78,7 +78,7 @@ $cartTotal = array_sum(array_column($_SESSION['cart'] ?? [], 'price'));
       }
     }
   </script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
 </head>
 <body class="min-h-screen antialiased text-gray-800">
@@ -98,12 +98,12 @@ $cartTotal = array_sum(array_column($_SESSION['cart'] ?? [], 'price'));
             <ul class="space-y-3">
               <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">🏠</span><span class="text-sm font-medium">Home</span></a></li>
               <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">🔎</span><span class="text-sm font-medium">Explore</span></a></li>
-              <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">💾</span><span class="text-sm font-medium">Whishlist </span></a></li>
+              <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">❤️</span><span class="text-sm font-medium">Whishlist </span></a></li>
               <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">🛒</span><span class="text-sm font-medium">Cart</span></a></li>
-              <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">💼</span><span class="text-sm font-medium">Selling</span></a></li>
+              <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">💳  </span><span class="text-sm font-medium">Selling</span></a></li>
               <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">👤</span><span class="text-sm font-medium">Profile</span></a></li>
               <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">📜</span><span class="text-sm font-medium">Preach History</span></a></li>
-              <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">✉️</span><span class="text-sm font-medium">Contact us</span></a></li>
+              <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">💬</span><span class="text-sm font-medium">Contact us</span></a></li>
               <li><a href="#" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50"><span class="w-9 h-9 flex items-center justify-center rounded-md bg-white border text-gray-600">⚙️</span><span class="text-sm font-medium">Setting</span></a></li>
             </ul>
           </nav>
@@ -134,12 +134,12 @@ $cartTotal = array_sum(array_column($_SESSION['cart'] ?? [], 'price'));
         </div>
         <div class="flex items-center gap-3">
           <div class="relative">
-            <input type="search" placeholder="Search Product" class="w-72 md:w-96 px-3 py-2 rounded-full border border-gray-200 shadow-sm focus:outline-none" />
-            <button class="absolute right-1 top-1/2 -translate-y-1/2 bg-white px-3 py-1 rounded-full border border-gray-200">🔍</button>
+             <div class="relative ">
+                    <input type="text" placeholder="Search Product" class="py-2 pl-3 pr-10 text-sm focus:outline-none rounded-l-md w-64">
+                   
+                </div>
+            
           </div>
-          <button class="w-9 h-9 rounded-md bg-white border shadow-sm">✉️</button>
-          <button class="w-9 h-9 rounded-md bg-white border shadow-sm">🔔</button>
-          <button class="w-9 h-9 rounded-md bg-white border shadow-sm">👤</button>
         </div>
       </div>
 
