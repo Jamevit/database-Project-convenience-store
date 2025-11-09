@@ -158,7 +158,6 @@ a:hover {
   .logo { width: 76px; }
 }
 
-/* End of stylesheet */
 
 
 .app-left { display: flex; align-items: center; gap: 12px; }
@@ -259,27 +258,6 @@ a:hover {
   background-color: #d1d5db; /* gray-300 */
   border-radius: 9999px; /* rounded-full */
   margin-bottom: 0.5rem;
-}
-/* --------------------
-   Header alignment (logo + title)
-   -------------------- */
-.header {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* spacing between logo and title */
-  padding: 12px 20px;
-}
-
-.header .logo {
-  width: 40px;
-  height: auto;
-  margin: 0; /* override auto-centering from earlier logo rule */
-}
-
-.header .app-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0;
 }
 
 

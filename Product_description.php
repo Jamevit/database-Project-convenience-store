@@ -11,18 +11,25 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-red': '#D13A48', /* Used for Checkout, Add to Cart, etc. */
-                        'placeholder-bg': '#f7f7f7', /* Light background for placeholders */
-                        'placeholder-fill': '#ccc', /* Grey color for abstract shapes */
+                        // Using the same primary/accent colors as the index.php dashboard
+                        primary: '#b94a4a', 
+                        accent: '#e86d6d',
+                        'placeholder-bg': '#f7f7f7', 
+                        'placeholder-fill': '#ccc',
+                    },
+                    // We need 'soft-lg' shadow definition from the main dashboard for consistency
+                    boxShadow: {
+                        'soft-lg': '0 14px 30px rgba(9,18,40,0.08)',
                     }
                 }
             }
         }
     </script>
     
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
+        /* Existing CSS for abstract shapes */
         .shape {
             position: absolute;
             background-color: var(--tw-placeholder-fill);
@@ -62,26 +69,24 @@
         <div class="flex items-center gap-x-1"> 
             <div class="w-12 h-12 rounded-md bg-gradient-to-br from-blue-600 to-cyan-400 text-white flex items-center justify-center text-lg font-bold">
             <img src="asset/2960679-2182.png">
-        </div>  
+        </div>  
             
             <div class="text-lg font-semibold">Convenience<br/><span class="text-sm text-gray-500">Store</span></div>
         </div>
         <div class="flex items-center space-x-4">
             <div class="relative flex items-center border border-gray-300 rounded-md pr-1">
                 <input type="text" placeholder="Search Product" class="py-2 pl-3 pr-10 text-sm focus:outline-none rounded-l-md w-64">
-                <i class="fas fa-search absolute right-10 text-gray-400"></i>
-                <i class="fas fa-sliders-h text-primary-red text-lg cursor-pointer px-2 border-l border-gray-300"></i>
             </div>
-           
+            
         </div>
     </div>
 </header>
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         <div class="text-sm text-gray-500 mb-6">
-            <a href="#" class="hover:text-primary-red">Home</a> / 
-            <a href="#" class="hover:text-primary-red">Categories</a> / 
-            <a href="#" class="hover:text-primary-red">Fruits</a> / 
+            <a href="#" class="hover:text-primary">Home</a> / 
+            <a href="#" class="hover:text-primary">Categories</a> / 
+            <a href="#" class="hover:text-primary">Fruits</a> / 
             <span class="font-semibold">Pinnapple</span>
         </div>
 
@@ -125,10 +130,10 @@
                             <button class="bg-gray-100 px-3 py-2 text-lg hover:bg-gray-200 border-l border-gray-300">+</button>
                         </div>
                         
-                        <button class="bg-primary-red text-white font-bold px-6 py-2.5 rounded-md uppercase hover:bg-red-700 transition duration-150">
+                        <button class="bg-primary text-white font-bold px-6 py-2.5 rounded-md uppercase hover:bg-red-700 transition duration-150">
                             ADD TO CART
                         </button>
-                        <button class="border border-primary-red text-primary-red p-3 rounded-md hover:bg-primary-red/10 transition duration-150">
+                        <button class="border border-primary text-primary p-3 rounded-md hover:bg-primary/10 transition duration-150">
                             <i class="fa-regular fa-heart"></i>
                         </button>
                     </div>
@@ -136,30 +141,30 @@
             </div>
 
             <aside class="lg:col-span-1 pt-4">
-                <div class="border border-primary-red rounded-xl p-5 shadow-lg">
-                    <h3 class="text-xl font-medium mb-4 text-primary-red border-b border-gray-200 pb-3">Your Cart</h3>
+                <div class="bg-gradient-to-br from-red-200 to-red-400 text-white rounded-2xl p-5 shadow-soft-lg">
+                    <h3 class="text-xl font-semibold mb-4 border-b border-white/50 pb-3">Your Cart</h3>
                     
-                    <div class="flex justify-between items-center pb-4 border-b border-dashed border-gray-300 mb-4">
+                    <div class="flex justify-between items-center pb-4 border-b border-dashed border-white/50 mb-4">
                         <div class="flex items-center space-x-3">
-                            <div class="w-12 h-12 bg-placeholder-bg rounded-md"></div>
+                            <div class="w-12 h-12 bg-white/30 rounded-md"></div>
                             <div>
                                 <p class="font-semibold">Pinnapple</p>
-                                <p class="text-sm text-gray-500">3 x Price</p>
+                                <p class="text-sm text-white/90">3 x Price</p>
                             </div>
                         </div>
-                        <span class="text-lg text-gray-400 cursor-pointer hover:text-primary-red">×</span>
+                        <span class="text-lg text-white/70 cursor-pointer hover:text-white">×</span>
                     </div>
 
                     <div class="flex justify-between font-bold pt-2">
                         <span>Sub Total:</span>
-                        <span class="text-gray-800">Price</span>
+                        <span class="text-white">Price</span>
                     </div>
 
                     <div class="flex space-x-3 mt-5">
-                        <button class="flex-1 py-3 text-sm font-bold border border-gray-300 rounded-md uppercase hover:bg-gray-50 transition duration-150">
+                        <button class="flex-1 py-3 text-sm font-bold border border-white bg-white text-primary rounded-md uppercase hover:bg-gray-100 transition duration-150">
                             VIEW CART
                         </button>
-                        <button class="flex-1 py-3 text-sm font-bold bg-primary-red text-white rounded-md uppercase hover:bg-red-700 transition duration-150">
+                        <button class="flex-1 py-3 text-sm font-bold bg-primary text-white rounded-md uppercase hover:bg-red-700 transition duration-150">
                             CHECKOUT
                         </button>
                     </div>
