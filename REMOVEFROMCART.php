@@ -1,27 +1,29 @@
 <?php
+// CRITICAL FIX 1: Start output buffering
+ob_start(); 
 session_start();
 
 // Check if the request is a GET and if the 'index' parameter is present
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['index'])) {
     
-    // 1. Sanitize the index provided via the URL (must be an integer)
-    $index_to_remove = (int)$_GET['index'];
+    // 1. SECURELY Sanitize the index: Use filter_var to ensure it's a valid integer
+    $index_to_remove = filter_var($_GET['index'], FILTER_VALIDATE_INT);
 
-    // 2. Check if the cart exists and if the index is valid
-    if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
+    // 2. Proceed only if the index is a valid non-negative integer (CRITICAL)
+    if ($index_to_remove !== false && $index_to_remove >= 0) {
         
-        if (array_key_exists($index_to_remove, $_SESSION['cart'])) {
+        // 3. Check if the cart exists and if the index is valid
+        if (isset($_SESSION['cart']) && is_array($_SESSION['cart']) && array_key_exists($index_to_remove, $_SESSION['cart'])) {
             
-            // 3. Remove the item from the session array using the index
+            // 4. Remove the item
             unset($_SESSION['cart'][$index_to_remove]);
             
-            // 4. Re-index the array: This ensures array indexes are sequential (0, 1, 2...)
-            // If you skip this, removing index 1 would leave indexes 0 and 2, which would break the next remove operation!
+            // 5. Re-index the array: CRITICAL for cart stability
             $_SESSION['cart'] = array_values($_SESSION['cart']);
         }
     }
     
-    // 5. Redirect the user back to the home page to see the updated cart
+    // 6. Redirect the user
     header("Location: HOME.php");
     exit();
 }
