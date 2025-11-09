@@ -57,26 +57,25 @@
 <body class="font-sans text-gray-800">
 
     <header class="border-b border-gray-200">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
-            <h1 class="text-2xl font-bold">Number 1 Shop</h1>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+        
+        <div class="flex items-center gap-x-1"> 
+            <div class="w-12 h-12 rounded-md bg-gradient-to-br from-blue-600 to-cyan-400 text-white flex items-center justify-center text-lg font-bold">
+            <img src="asset/2960679-2182.png">
+        </div>  
             
-            <nav class="hidden lg:flex space-x-6 text-sm font-medium">
-                <a href="#" class="text-gray-600 hover:text-primary-red">HOMES</a>
-                <a href="#" class="text-gray-600 hover:text-primary-red">PAGES</a>
-                <a href="#" class="text-primary-red border-b-2 border-primary-red pb-1">PRODUCTS</a>
-                <a href="#" class="text-gray-600 hover:text-primary-red">CONTACT</a>
-            </nav>
-            
-            <div class="flex items-center space-x-4">
-                <div class="relative flex items-center border border-gray-300 rounded-md pr-1">
-                    <input type="text" placeholder="Search Product" class="py-2 pl-3 pr-10 text-sm focus:outline-none rounded-l-md w-64">
-                    <i class="fas fa-search absolute right-10 text-gray-400"></i>
-                    <i class="fas fa-sliders-h text-primary-red text-lg cursor-pointer px-2 border-l border-gray-300"></i>
-                </div>
-               
-            </div>
+            <div class="text-lg font-semibold">Convenience<br/><span class="text-sm text-gray-500">Store</span></div>
         </div>
-    </header>
+        <div class="flex items-center space-x-4">
+            <div class="relative flex items-center border border-gray-300 rounded-md pr-1">
+                <input type="text" placeholder="Search Product" class="py-2 pl-3 pr-10 text-sm focus:outline-none rounded-l-md w-64">
+                <i class="fas fa-search absolute right-10 text-gray-400"></i>
+                <i class="fas fa-sliders-h text-primary-red text-lg cursor-pointer px-2 border-l border-gray-300"></i>
+            </div>
+           
+        </div>
+    </div>
+</header>
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         <div class="text-sm text-gray-500 mb-6">
@@ -130,7 +129,7 @@
                             ADD TO CART
                         </button>
                         <button class="border border-primary-red text-primary-red p-3 rounded-md hover:bg-primary-red/10 transition duration-150">
-                            <i class="fas fa-heart text-lg"></i>
+                            <i class="fa-regular fa-heart"></i>
                         </button>
                     </div>
                 </div>
